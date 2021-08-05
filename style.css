@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:hover {
+  outline: none;
+}
+
+header{
+    display: flex;
+    padding: .25rem 2rem;
+    justify-content: space-between;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+header img{
+    height: 6rem;
+    width: 6rem;
+    align-self: center;
+}
+
+header h3{
+    align-self: center;
+    color: royalblue;
+}
+
+.hero{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.hero-bg{
+    background: black;
+    display: flex;
+}
+
+.hero img{
+    margin: 0;
+    height: 60vh;
+    width: 100%;
+}
+
+.hero-msg{
+    position: absolute;
+    color: white;
+    margin: auto;
+    align-self: center;
+    padding: 5rem;
+    background: rgba(65, 105, 225, 0.25);
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-msg a{
+    width: max-content;
+    margin: auto;
+    padding: .5rem 2rem;
+    border: none;
+    background: royalblue;
+    color: white;
+    border-radius: .25rem;
+}
+
+section{
+    padding: 1rem;
+}
+
+.preview{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.preview.scanning::after{
+    content: "";
+    position: absolute;
+    height: .25rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.575);
+    top: 0;
+    animation: scan 1s infinite;
+}
+
+
+@keyframes scan {
+    from {
+        transform: translateY(0rem);
+    }
+    to {
+        transform: translateY(20rem);
+    }
+}
+
+.preview img{
+    height: 20rem;
+    width: 20rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border-radius: 5px;
+}
+
+.result{
+    text-align: center;
+    padding: 1rem;
+    color: royalblue;
+    font-weight: bold;
+}
+
+.heading{
+    padding: 1rem;
+    text-align: center;
+    color: royalblue;
+}
+
+.actions{
+    text-align: center;
+}
+
+.actions button{
+    background: royalblue;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: .25rem;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.danger{
+    animation: danger 1s;
+    border: 2px solid red;
+}
+
+.save{
+    animation: save 1s;
+    border: 2px solid rgb(20, 243, 20);
+}
+
+@keyframes danger {
+    0%{
+        border: 2px solid red;
+    }
+    25%{
+        border: none;
+    }
+    50%{
+        border: 2px solid red;
+    }
+    75%{
+        border: 2px solid red;
+    }
+    100%{
+        border: none;
+    }
+}
+
+@keyframes save {
+    0%{
+        border: 2px solid rgb(20, 243, 20);
+    }
+    25%{
+        border: none;
+    }
+    50%{
+        border: 2px solid rgb(20, 243, 20);
+    }
+    75%{
+        border: 2px solid rgb(20, 243, 20);
+    }
+    100%{
+        border: none;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .preview img{
+        width: 100%;
+    }
+
+    .hero-msg{
+        padding: 3rem;
+    }
+
+    .hero-msg a{
+        padding: 1rem;
+    }
+
+    .hero img{
+        height: 30vh;
+    }
+
+    header{
+        padding: .5rem;
+    }
+
+    header img{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .hero-bg{
+        flex-direction: column;
+    }
+    header h3{
+        font-size: 15px;
+    }
+}

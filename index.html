@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Diagnosis</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src=".//images.png">
+        <h3>Brain Scan Diagnosis</h3>
+    </header>
+    <div class="hero">
+        <div class="hero-bg">
+            <img src="./child-having-mri-scan.jpg"/>
+            <img src="./Image12.jpg"/>
+        </div>
+        <h4 class="hero-msg">
+            Take Your Brain Diagnosis to Another Level of Automation with Artificial Intelligence
+            <a href="#diagnosis">Begin</a>
+        </h4>
+    </div>
+    <section id="diagnosis">
+        <div class="heading">Diagnoser</div>
+        <div class="preview">
+            <img class="img-preview">
+            <div class="result">Upload A fMRI image Scan of a Brain</div>
+        </div>
+        <div class="actions">
+            <button>
+                <input type="file">
+                Upload fRMI Image Scan
+            </button>
+            <button class="predict">Predict</button>
+        </div>
+    </section>
+    <script src="./tensorlfow.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
